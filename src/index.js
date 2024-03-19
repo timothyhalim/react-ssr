@@ -1,11 +1,11 @@
 import React from 'react';
-import { hydrateRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
 import App from './App';
 
-const root = hydrateRoot(
-  document.getElementById('root'),
+ReactDOM.hydrate(
   <React.StrictMode>
     <App text="Hydrate"/>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
